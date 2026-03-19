@@ -990,6 +990,54 @@
                     "isPartOfComposite": false
                 }
             ]
+        },
+        {
+            "name": "Brawler",
+            "id": "c96d85e4-6f0b-426f-a86a-110b43c50ef6",
+            "actions": [
+                {
+                    "name": "OnMove",
+                    "type": "Value",
+                    "id": "45e50dd5-b84c-4f4e-8f1a-733ecc961086",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "OnJump",
+                    "type": "Button",
+                    "id": "ea49c449-94ba-4b47-bc5e-3edc4a7e4103",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "c4d166cb-f2d8-41de-b5b5-ca3318c4a7c3",
+                    "path": "<Gamepad>/dpad",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "OnMove",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "48ac91fa-c3ea-4673-a597-ecb6b8ebfec0",
+                    "path": "<Gamepad>/buttonNorth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "OnJump",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
         }
     ],
     "controlSchemes": [
