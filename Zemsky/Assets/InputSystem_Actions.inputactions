@@ -992,22 +992,31 @@
             ]
         },
         {
-            "name": "Brawler",
-            "id": "c96d85e4-6f0b-426f-a86a-110b43c50ef6",
+            "name": "TopDownMove",
+            "id": "32327fbf-e154-4be0-bf0a-65bdbecaeff0",
             "actions": [
                 {
-                    "name": "OnMove",
+                    "name": "Move",
                     "type": "Value",
-                    "id": "45e50dd5-b84c-4f4e-8f1a-733ecc961086",
+                    "id": "ab72f613-985c-496c-9a93-7f431c40a2ce",
                     "expectedControlType": "Vector2",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
                 },
                 {
-                    "name": "OnJump",
+                    "name": "Shoot",
+                    "type": "Value",
+                    "id": "e8aca39c-b826-4426-ba6e-a40975b6e5a3",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "HeartPickup",
                     "type": "Button",
-                    "id": "ea49c449-94ba-4b47-bc5e-3edc4a7e4103",
+                    "id": "ae968b46-6fe1-4a7d-a826-6b85b01e76fa",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
@@ -1017,23 +1026,62 @@
             "bindings": [
                 {
                     "name": "",
-                    "id": "c4d166cb-f2d8-41de-b5b5-ca3318c4a7c3",
-                    "path": "<Gamepad>/dpad",
+                    "id": "f4b9ce8c-26da-47bf-9713-321dbec8d7db",
+                    "path": "<Gamepad>/leftStick",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "OnMove",
+                    "action": "Move",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "",
-                    "id": "48ac91fa-c3ea-4673-a597-ecb6b8ebfec0",
-                    "path": "<Gamepad>/buttonNorth",
+                    "id": "ac5809b1-d6c6-4035-a693-c17227db473b",
+                    "path": "<Gamepad>/rightStick",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "OnJump",
+                    "action": "Shoot",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "49bb7334-422e-40b0-89c7-fe3946d7c317",
+                    "path": "<Gamepad>/buttonWest",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "HeartPickup",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "CharMenu",
+            "id": "cc1f4c94-0e42-42bc-ad76-85b106b823c9",
+            "actions": [
+                {
+                    "name": "Ready",
+                    "type": "Button",
+                    "id": "e97e1f30-8d1a-41fb-bf7d-f6bd0a84d83f",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "6b9edacb-861a-4538-a846-c550bfd25ca3",
+                    "path": "<Gamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Ready",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
