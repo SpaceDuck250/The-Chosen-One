@@ -6,6 +6,13 @@ public class BulletScript : MonoBehaviour
     public float damage;
 
     public GameObject shooter;
+    public Rigidbody2D rb;
+
+    public void Fire(GameObject shooter, Vector2 shootForce)
+    {
+        this.shooter = shooter;
+        rb.AddForce(shootForce, ForceMode2D.Impulse);
+    }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -15,7 +22,10 @@ public class BulletScript : MonoBehaviour
         }
 
         HealthScript healthScript = other.gameObject.GetComponent<HealthScript>();
-        ApplyDamage(healthScript);
+        if (healthScript != null)
+        {
+            ApplyDamage(healthScript);
+        }
 
         Destroy(gameObject);
     }

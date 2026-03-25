@@ -71,16 +71,11 @@ public class PlayerShootScript : MonoBehaviour
         GameObject newBullet = Instantiate(bullet, transform.position, Quaternion.identity, bulletContainer);
 
         BulletScript bulletScript = newBullet.GetComponent<BulletScript>();
-        bulletScript.shooter = gameObject;
 
-        Rigidbody2D newBulletRb = newBullet.GetComponent<Rigidbody2D>();
-        if (newBulletRb != null)
-        {
-            Vector2 shootForce = direction * fireStrength;
-            newBulletRb.AddForce(shootForce, ForceMode2D.Impulse);
+        Vector2 shootForce = direction * fireStrength;
+        bulletScript.Fire(gameObject, shootForce);
+        canShoot = false;
 
-            canShoot = false;
-        }
     }
 
     private void RechargeShot()

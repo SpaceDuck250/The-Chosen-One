@@ -103,6 +103,8 @@ public class SharedHeartScript : MonoBehaviour
         Vector2 shootForce = shootDirection * shootStrenght;
         rb.AddForce(shootForce, ForceMode2D.Impulse);
 
+        Invoke("SetBackToNonTrigger", 0.1f);
+
     }
 
     private void SetBackToNonTrigger()

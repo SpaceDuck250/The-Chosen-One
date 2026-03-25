@@ -146,6 +146,7 @@ MonoBehaviour:
   tagToIgnore: Player
   damage: -10
   shooter: {fileID: 0}
+  rb: {fileID: 6025152793518097498}
 --- !u!61 &2790077338073907075
 BoxCollider2D:
   m_ObjectHideFlags: 0
