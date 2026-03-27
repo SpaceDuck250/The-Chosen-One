@@ -49,7 +49,7 @@ public class SharedHeartScript : MonoBehaviour
 
     private void Update()
     {
-        if (!followPlayer)
+        if (!followPlayer || transform == null)
         {
             return;
         }

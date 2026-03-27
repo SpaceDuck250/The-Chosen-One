@@ -14,6 +14,8 @@ public class MoveScript : MonoBehaviour
 
     public Vector2 moveInput;
 
+    public PlayerAnimatorScript playerAnimatorScript;
+
     private void Start()
     {
         inputManager.OnPlayerMove += OnPlayerMove;
@@ -39,5 +41,9 @@ public class MoveScript : MonoBehaviour
         Vector2 targetVelocity = moveInput * moveSpeed;
 
         rb.linearVelocity = Vector2.SmoothDamp(rb.linearVelocity, targetVelocity, ref refVelocity, Time.fixedDeltaTime * smoothValue);
+
+        // Make cleaner later
+        float playerSpeed = moveInput.magnitude;
+        playerAnimatorScript.PlayMoveAnimation(playerSpeed);
     }
 }

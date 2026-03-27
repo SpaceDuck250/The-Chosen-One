@@ -11,6 +11,10 @@ public class BulletScript : MonoBehaviour
     public void Fire(GameObject shooter, Vector2 shootForce)
     {
         this.shooter = shooter;
+
+        float turnAngle = OrientScript.CalculateTurnAngle(shootForce);
+        transform.rotation = Quaternion.Euler(0, 0, turnAngle);
+
         rb.AddForce(shootForce, ForceMode2D.Impulse);
     }
 
