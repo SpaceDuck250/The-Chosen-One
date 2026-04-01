@@ -18,15 +18,9 @@ public class SimpleTurretSpawner : MonoBehaviour
     {
         container = GameObject.FindGameObjectWithTag("Container").transform;
         bulletContainer = GameObject.FindGameObjectWithTag("BulletContainer").transform;
-    }
 
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.K))
-        {
-            SpawnAllTurrets();
-            print("done");
-        }
+        float spawnDelay = 0.1f;
+        Invoke("SpawnAllTurrets", spawnDelay);
     }
 
     public void SpawnAllTurrets()

@@ -3,8 +3,8 @@ using System;
 
 public class ShrineScript : MonoBehaviour
 {
-    public event 
-    public event Action<MapLevelData> OnMapLevelStart;
+    public event Action<int> OnPlayerEnter;
+    public static event Action<MapLevelData> OnMapLevelStart;
 
     public MapLevelData mapLevelContained;
 
@@ -21,16 +21,37 @@ public class ShrineScript : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
+            if (playersParent == null)
+            {
+                playersParent = collision.gameObject.transform.parent.gameObject;
+            }
 
+            CountPlayers(1);
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            if (playersParent == null)
+            {
+                playersParent = collision.gameObject.transform.parent.gameObject;
+            }
+
+            CountPlayers(-1);
         }
     }
 
     private void CountPlayers(int addAmount)
     {
         totalPlayersEntered += addAmount;
+        OnPlayerEnter?.Invoke(totalPlayersEntered);
+
         if (totalPlayersEntered == 2)
         {
-
+            OnMapLevelStart?.Invoke(mapLevelContained);
+            TeleportPlayersToNewMap();
         }
     }
 }

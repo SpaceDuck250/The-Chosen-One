@@ -6,18 +6,24 @@ public class ObstacleSubscriber : MonoBehaviour
 
     private void Start()
     {
-        obstacleSpawner.OnObstacleFinished += OnObstacleFinished;
+        ObstacleSpawnerScript.OnObstacleFinished += OnObstacleFinished;
+        ShrineScript.OnMapLevelStart += OnMapLevelStart;
     }
 
     private void OnDestroy()
     {
-        obstacleSpawner.OnObstacleFinished -= OnObstacleFinished;
-
+        ObstacleSpawnerScript.OnObstacleFinished -= OnObstacleFinished;
+        ShrineScript.OnMapLevelStart += OnMapLevelStart;
     }
 
     private void OnObstacleFinished()
     {
         obstacleSpawner.SpawnNextObstacle();
+    }
+
+    private void OnMapLevelStart(MapLevelData mapData)
+    {
+        obstacleSpawner.ChangeMapLevelData(mapData);
     }
 }
 

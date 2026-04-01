@@ -9,11 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 432989dd7d3b5c648b3b57b8a2a9864a, type: 3}
-  m_Name: Level1
+  m_Script: {fileID: 11500000, guid: b9e8f0797cea46246ad5299d20352183, type: 3}
+  m_Name: Level1Obstacles
   m_EditorClassIdentifier: 
-  cameraCenterPosition: {x: 0, y: 0}
-  mapName: Temple of Noobs
-  obstacleList:
-  - {fileID: 11400000, guid: b23000de8a3d9dc4cae0e63b027901e5, type: 2}
+  obstaclesList:
   - {fileID: 11400000, guid: d283446a4c7d0f14582decdbd3fc3b4d, type: 2}

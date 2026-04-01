@@ -5,20 +5,22 @@ using Edge;
 
 public class ObstacleSpawnerScript : MonoBehaviour
 {
-    public System.Action OnObstacleFinished;
+    public static System.Action OnObstacleFinished;
 
-    public ObstacleLevelData currentObstacleLevelData;
+    public MapLevelData currentMapLevelData;
     public List<ObstacleData> obstaclesToSpawnList;
 
     private int obstaclePointer = 0;
 
     public Transform obstacleContainer;
 
-    public void ChangeObstacleLevelData(ObstacleLevelData newLevelData)
+    public void ChangeMapLevelData(MapLevelData newLevelData)
     {
-        currentObstacleLevelData = newLevelData;
+        currentMapLevelData = newLevelData;
         obstaclesToSpawnList.Clear();
-        obstaclesToSpawnList = currentObstacleLevelData.obstaclesList;
+        obstaclesToSpawnList = currentMapLevelData.obstacleList;
+
+        SpawnNextObstacle();
     }
 
     public void SpawnNextObstacle()
