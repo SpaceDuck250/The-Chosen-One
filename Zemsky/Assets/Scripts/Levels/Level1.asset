@@ -16,4 +16,17 @@ MonoBehaviour:
   mapName: Temple of Noobs
   obstacleList:
   - {fileID: 11400000, guid: b23000de8a3d9dc4cae0e63b027901e5, type: 2}
+  - {fileID: 11400000, guid: 3f2637857c944204fb52711b6f88d822, type: 2}
   - {fileID: 11400000, guid: d283446a4c7d0f14582decdbd3fc3b4d, type: 2}
+  - {fileID: 11400000, guid: 1b9a62737531e7d40b07899cd5850955, type: 2}
+  - {fileID: 11400000, guid: ccf22f412ef257a468af9eece4f1bb95, type: 2}
+  - {fileID: 11400000, guid: 3f2637857c944204fb52711b6f88d822, type: 2}
+  - {fileID: 11400000, guid: 1b9a62737531e7d40b07899cd5850955, type: 2}
+  - {fileID: 11400000, guid: 3f2637857c944204fb52711b6f88d822, type: 2}
+  - {fileID: 11400000, guid: 19460cc82f61d6f43887929cd83e22c9, type: 2}
+  - {fileID: 11400000, guid: d283446a4c7d0f14582decdbd3fc3b4d, type: 2}
+  - {fileID: 11400000, guid: 1b9a62737531e7d40b07899cd5850955, type: 2}
+  - {fileID: 11400000, guid: 3f2637857c944204fb52711b6f88d822, type: 2}
+  - {fileID: 11400000, guid: d283446a4c7d0f14582decdbd3fc3b4d, type: 2}
+  - {fileID: 11400000, guid: 1b9a62737531e7d40b07899cd5850955, type: 2}
+  - {fileID: 11400000, guid: 3f2637857c944204fb52711b6f88d822, type: 2}

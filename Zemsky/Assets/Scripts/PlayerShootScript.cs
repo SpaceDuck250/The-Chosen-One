@@ -57,15 +57,6 @@ public class PlayerShootScript : MonoBehaviour
         print(shootDirection + "mog");
     }
 
-    //private Vector2 RoundShootDirection(Vector2 unroundedShootDirection)
-    //{
-    //    int x = Mathf.RoundToInt(unroundedShootDirection.x);
-    //    int y = Mathf.RoundToInt(unroundedShootDirection.y);
-
-    //    Vector2 roundedShootDirection = new Vector2(x, y);
-    //    return roundedShootDirection;
-    //}
-
     private void ShootBullet(GameObject bullet, Vector2 direction)
     {
         GameObject newBullet = Instantiate(bullet, transform.position, Quaternion.identity, bulletContainer);

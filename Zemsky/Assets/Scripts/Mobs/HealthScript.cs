@@ -36,6 +36,27 @@ public class HealthScript : MonoBehaviour
         OnHealthChanged?.Invoke(healthInfo);
     }
 
+    public void SetHealth(float newHealth)
+    {
+        if (health > maxHealth)
+        {
+            health = maxHealth;
+        }
+        else if (health < 0)
+        {
+            health = 0;
+            CheckIfDied(0);
+        }
+        else
+        {
+            health = newHealth;
+        }
+
+        HealthInfo healthInfo = CreateNewHealthInfo(0);
+        OnAnyHealthChanged?.Invoke(healthInfo);
+        OnHealthChanged?.Invoke(healthInfo);
+    }
+
     private HealthInfo CreateNewHealthInfo(float healthChangeAmount)
     {
         HealthInfo healthInfo = new HealthInfo
@@ -59,7 +80,8 @@ public class HealthScript : MonoBehaviour
             OnAnyDeath?.Invoke(deathHealthInfo);
             OnDeath?.Invoke(deathHealthInfo);
 
-            Destroy(owner);
+            //Comment out later
+            //Destroy(owner);
         }
     }
 }

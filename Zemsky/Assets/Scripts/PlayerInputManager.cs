@@ -12,7 +12,7 @@ public class PlayerInputManager : MonoBehaviour
     {
         Vector3 moveInput = input.Get<Vector2>();
  
-        print(moveInput);
+        //print(moveInput);
 
         OnPlayerMove?.Invoke(moveInput);
     }
@@ -21,7 +21,7 @@ public class PlayerInputManager : MonoBehaviour
     {
         Vector3 shootDirection = input.Get<Vector2>();
 
-        print(shootDirection);
+        //print(shootDirection);
 
         OnPlayerShoot?.Invoke(shootDirection);
     }

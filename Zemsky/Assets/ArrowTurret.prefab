@@ -49,7 +49,7 @@ MonoBehaviour:
   bulletContainer: {fileID: 0}
   timeUntilNextShot: 1
   ammo: 10
-  shootStrength: 10
+  shootStrength: 8
   shootDirection: {x: 0, y: 0}
 --- !u!212 &7411108995928297974
 SpriteRenderer:

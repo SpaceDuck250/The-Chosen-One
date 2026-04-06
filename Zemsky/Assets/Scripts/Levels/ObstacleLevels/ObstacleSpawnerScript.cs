@@ -2,24 +2,44 @@ using UnityEngine;
 using System;
 using System.Collections.Generic;
 using Edge;
+using System.Collections;
 
 public class ObstacleSpawnerScript : MonoBehaviour
 {
     public static System.Action OnObstacleFinished;
 
     public MapLevelData currentMapLevelData;
-    public List<ObstacleData> obstaclesToSpawnList;
+    public List<ObstacleData> obstaclesToSpawnList = new List<ObstacleData>();
 
     private int obstaclePointer = 0;
 
     public Transform obstacleContainer;
 
+    public float waitTimeUntilSpawnFirstObstacle;
+
     public void ChangeMapLevelData(MapLevelData newLevelData)
     {
+        StopAllCoroutines();
+
+        StopAllObstacles();
+
+        obstaclePointer = 0;
+
         currentMapLevelData = newLevelData;
         obstaclesToSpawnList.Clear();
-        obstaclesToSpawnList = currentMapLevelData.obstacleList;
 
+        foreach (var obstacle in newLevelData.obstacleList)
+        {
+            obstaclesToSpawnList.Add(obstacle);
+        }
+
+        StartCoroutine(waitUntilSpawnNextObstacle());
+        
+    }
+
+    public IEnumerator waitUntilSpawnNextObstacle()
+    {
+        yield return new WaitForSeconds(waitTimeUntilSpawnFirstObstacle);
         SpawnNextObstacle();
     }
 
@@ -38,9 +58,18 @@ public class ObstacleSpawnerScript : MonoBehaviour
 
     public void SpawnObstacle(ObstacleData obstacleData)
     {
-        Vector2 spawnPosition = obstacleData.spawnPosition;
+        Vector2 spawnPosition = obstacleData.spawnPosition + currentMapLevelData.cameraCenterPosition;
             
         GameObject newObstacle = Instantiate(obstacleData.obstacleObj, spawnPosition, Quaternion.identity, obstacleContainer);
+    }
+
+    public void StopAllObstacles()
+    {
+
+        foreach (Transform obstacle in obstacleContainer)
+        {
+            Destroy(obstacle.gameObject);
+        }
     }
 
 }

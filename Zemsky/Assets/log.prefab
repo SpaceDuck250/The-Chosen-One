@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 1928733350848037106}
   m_Layer: 0
   m_Name: log
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -175,7 +175,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.017165046}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -185,7 +185,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.9375, y: 0.28125}
+  m_Size: {x: 0.7795819, y: 0.10273386}
   m_EdgeRadius: 0
 --- !u!114 &5547581364958964619
 MonoBehaviour:
@@ -202,7 +202,7 @@ MonoBehaviour:
   rb: {fileID: 4126110784193391922}
   rollSpeed: 5
   moveDirection: {x: 0, y: -1}
-  damage: -100
+  damage: -50
 --- !u!114 &1928733350848037106
 MonoBehaviour:
   m_ObjectHideFlags: 0

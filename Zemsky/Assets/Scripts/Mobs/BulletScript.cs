@@ -20,18 +20,25 @@ public class BulletScript : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.tag == tagToIgnore || other.gameObject == shooter)
+        print(other.gameObject + "-Arrow");
+        if (other.tag == tagToIgnore || other.gameObject == shooter || other.gameObject == gameObject)
         {
+            print("ignored");
             return;
         }
 
         HealthScript healthScript = other.gameObject.GetComponent<HealthScript>();
         if (healthScript != null)
         {
+            print("didnt");
+
             ApplyDamage(healthScript);
+
         }
 
         Destroy(gameObject);
+
+
     }
 
     private void ApplyDamage(HealthScript healthScript)
