@@ -17,11 +17,13 @@ public class SharedHeartPickupScript : MonoBehaviour
     private void Start()
     {
         inputManager.OnTryPickupHeart += OnTryPickupHeartOrRelease;
+        GameManager.OnGameEnd += OnGameEnd;
     }
 
     private void OnDestroy()
     {
         inputManager.OnTryPickupHeart -= OnTryPickupHeartOrRelease;
+        GameManager.OnGameEnd -= OnGameEnd;
 
     }
 
@@ -77,4 +79,10 @@ public class SharedHeartPickupScript : MonoBehaviour
 
         OnSharedHeartPickedUp?.Invoke(gameObject);
     }
+
+    private void OnGameEnd(bool gameWon)
+    {
+        TryReleaseHeart();
+    }
 }
+

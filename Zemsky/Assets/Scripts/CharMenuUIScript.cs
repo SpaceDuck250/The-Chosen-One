@@ -7,6 +7,9 @@ public class CharMenuUIScript : MonoBehaviour
     public TextMeshProUGUI connectedTextComponent;
     public TextMeshProUGUI readyTextComponent;
 
+    public Sprite monkSprite;
+    public Image monkImageComponent;
+
     private void Start()
     {
         JoinManager.OnPlayerConnected += OnPlayerConnected;
@@ -39,6 +42,8 @@ public class CharMenuUIScript : MonoBehaviour
         }
 
         SetTextComponentTextTo(connectedTextComponent, "connected", Color.green);
+
+        ShowMonkImage();
     }
 
     private void SetTextComponentTextTo(TextMeshProUGUI textComponent, string newText, Color textColor)
@@ -48,5 +53,11 @@ public class CharMenuUIScript : MonoBehaviour
         {
             textComponent.color = textColor; 
         }
+    }
+
+    private void ShowMonkImage()
+    {
+        monkImageComponent.sprite = monkSprite;
+        monkImageComponent.gameObject.SetActive(true);
     }
 }

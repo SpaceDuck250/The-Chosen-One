@@ -9,11 +9,18 @@ public class GameManager : MonoBehaviour
 
     public MapLevelData mainAreaLevelSelectorArea;
 
-    public static event Action<bool> OnGameEnd;
+    public static Action<bool> OnGameEnd;
 
     public float camOffset;
 
     public HealthScript playerHealthScript;
+
+    public static GameManager instance;
+
+    private void Awake()
+    {
+        instance = this;
+    }
 
     private void Start()
     {
@@ -56,6 +63,9 @@ public class GameManager : MonoBehaviour
         Vector3 zOffsetVector = new Vector3(0, 0, zOffset);
 
         objToTransport.transform.position = (Vector3)newPosition + zOffsetVector;
+
+        Vector3 playerSpawnOffset = new Vector3(0, 1, 0);
+        SetPlayersLocalPosition(playerSpawnOffset);
     }
 
     public void TransportBackToMainArea()
@@ -65,5 +75,16 @@ public class GameManager : MonoBehaviour
         Transport(camera, mainAreaPosition, camOffset);
         //Transport(sharedHeart, mainAreaPosition);
         Transport(sharedPlayer, mainAreaPosition);
+
+        Vector3 playerSpawnOffset = new Vector3(-10, 0, 0);
+        SetPlayersLocalPosition(playerSpawnOffset);
+    }
+
+    private void SetPlayersLocalPosition(Vector3 offset)
+    {
+        foreach (Transform child in sharedPlayer.transform)
+        {
+            child.transform.localPosition = offset;
+        }
     }
 }

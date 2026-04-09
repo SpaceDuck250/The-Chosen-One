@@ -71,12 +71,20 @@ public class SharedHeartScript : MonoBehaviour
 
     public void FollowNobody()
     {
+        if (!followPlayer)
+        {
+            return;
+        }
+
         inputManager.OnPlayerShoot -= OnPlayerShoot;
 
         //boxCollider.isTrigger = false;
 
 
         followPlayer = false;
+
+        //SharedHeartPickupScript.OnSharedHeartReleased?.Invoke(gameObject);
+        
         print(followPlayer);
     }
 

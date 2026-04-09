@@ -16,6 +16,7 @@ public class ObstacleSpawnerScript : MonoBehaviour
     public Transform obstacleContainer;
 
     public float waitTimeUntilSpawnFirstObstacle;
+    public float waitTimeUntilWin;
 
     public void ChangeMapLevelData(MapLevelData newLevelData)
     {
@@ -45,10 +46,16 @@ public class ObstacleSpawnerScript : MonoBehaviour
 
     public void SpawnNextObstacle()
     {
-        if (obstaclePointer >= obstaclesToSpawnList.Count)
+        if (obstaclePointer >= obstaclesToSpawnList.Count && obstaclePointer != 0)
+        {
+            Invoke("SetLevelToWon", waitTimeUntilWin);
+            return;
+        }
+        else if(obstaclePointer >= obstaclesToSpawnList.Count)
         {
             return;
         }
+
 
         ObstacleData obstacleData = obstaclesToSpawnList[obstaclePointer];
         SpawnObstacle(obstacleData);
@@ -70,6 +77,11 @@ public class ObstacleSpawnerScript : MonoBehaviour
         {
             Destroy(obstacle.gameObject);
         }
+    }
+
+    public void SetLevelToWon()
+    {
+        GameManager.OnGameEnd?.Invoke(true);
     }
 
 }
