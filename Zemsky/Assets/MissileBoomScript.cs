@@ -4,7 +4,9 @@ using System;
 public class MissileBoomScript : MonoBehaviour
 {
     public GameObject boomObj;
-    public static event Action OnMissileBoom;
+    public event Action OnMissileBoom;
+
+    public static event Action OnAnyMissileBoom;
     public static event Action<GameObject> OnMissileAboutToBoom;
 
     private float boomTimer;
@@ -13,14 +15,15 @@ public class MissileBoomScript : MonoBehaviour
     public float aboutToBoomTime;
     private bool aboutToBoomSetAlready = false;
 
+    public HealthScript healthScript;
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         string collisionTag = collision.gameObject.tag;
-        if (collisionTag == "Enemy")
+        if (collisionTag == "Player")
         {
-            return;
+            Boom();
         }
-        Boom();
 
     }
 
@@ -40,6 +43,7 @@ public class MissileBoomScript : MonoBehaviour
         Instantiate(boomObj, transform.position, Quaternion.identity);
         OnMissileBoom?.Invoke();
 
+        //healthScript.TakeDamage(healthScript.maxHealth);
         Destroy(gameObject);
     }
 

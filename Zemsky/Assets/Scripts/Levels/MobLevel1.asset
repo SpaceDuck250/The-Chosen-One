@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 432989dd7d3b5c648b3b57b8a2a9864a, type: 3}
+  m_Name: MobLevel1
+  m_EditorClassIdentifier: 
+  cameraCenterPosition: {x: 70, y: 0}
+  mapName: Temple of Mobs
+  obstacleList:
+  - {fileID: 11400000, guid: f668ff3ea51a83347931a880eb0feafe, type: 2}
+  - {fileID: 11400000, guid: 52365e81051feb947bcbe1782d00fa98, type: 2}
+  - {fileID: 11400000, guid: e08f83fac03087e4b936b06ba97c66e5, type: 2}
+  - {fileID: 11400000, guid: 0452482e75e1f4d428945c960d49411f, type: 2}
+  - {fileID: 11400000, guid: 52365e81051feb947bcbe1782d00fa98, type: 2}
+  - {fileID: 11400000, guid: f668ff3ea51a83347931a880eb0feafe, type: 2}

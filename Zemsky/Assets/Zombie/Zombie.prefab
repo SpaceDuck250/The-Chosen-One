@@ -167,6 +167,8 @@ GameObject:
   - component: {fileID: 1482848639793605381}
   - component: {fileID: 5055107184657120721}
   - component: {fileID: 8419076801714143352}
+  - component: {fileID: 3486761369761888573}
+  - component: {fileID: 6883464904485826010}
   m_Layer: 0
   m_Name: Zombie
   m_TagString: Enemy
@@ -268,7 +270,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 7388844626321315330}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.5
+  m_Radius: 0.22
   m_Speed: 3.5
   m_Acceleration: 8
   avoidancePriority: 50
@@ -277,8 +279,8 @@ NavMeshAgent:
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
-  m_Height: 1.4226667
-  m_BaseOffset: 0.71133333
+  m_Height: 0.52
+  m_BaseOffset: 0.21
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
 --- !u!61 &7967851814713424803
@@ -340,7 +342,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 0
-  maxHealth: 50
+  maxHealth: 10
   owner: {fileID: 7388844626321315330}
 --- !u!114 &5055107184657120721
 MonoBehaviour:
@@ -367,3 +369,38 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthScript: {fileID: 0}
+--- !u!114 &3486761369761888573
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7388844626321315330}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a340310029efc3b47907b1ea688ccd20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthScript: {fileID: 1482848639793605381}
+--- !u!95 &6883464904485826010
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7388844626321315330}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 210ee96d5a9132643a685299827ee7af, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

@@ -16,6 +16,8 @@ GameObject:
   - component: {fileID: 6595209094818508582}
   - component: {fileID: 3298480001470087021}
   - component: {fileID: 1917698439105350563}
+  - component: {fileID: 2003520556267352761}
+  - component: {fileID: 5090770856720749216}
   m_Layer: 0
   m_Name: HomingMissile
   m_TagString: Enemy
@@ -151,6 +153,7 @@ MonoBehaviour:
   boomObj: {fileID: 877055700180311871, guid: 70cdc9b281d13fe4481a410da3702283, type: 3}
   boomTime: 8.2
   aboutToBoomTime: 3.24
+  healthScript: {fileID: 0}
 --- !u!61 &6595209094818508582
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -232,3 +235,30 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   missileAnimator: {fileID: 3298480001470087021}
+--- !u!114 &2003520556267352761
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6777204314032970067}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a340310029efc3b47907b1ea688ccd20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthScript: {fileID: 0}
+--- !u!114 &5090770856720749216
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6777204314032970067}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40d4ad019e70e6b408c671ca8034f569, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  missileBoomScript: {fileID: 6608444636315202705}
+  alertOnDeathScript: {fileID: 2003520556267352761}
