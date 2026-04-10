@@ -5,7 +5,7 @@ using System;
 public class CharMenuInputManager : MonoBehaviour
 {
     public static event Action<GameObject> OnReadyPressed;
-    private bool canPressReady = true;
+    private bool canPressReady = false;
 
     private void Start()
     {
@@ -24,7 +24,8 @@ public class CharMenuInputManager : MonoBehaviour
         {
             return;
         }
-         
+
+        canPressReady = true;
     }
 
     private void OnReady(InputValue input)

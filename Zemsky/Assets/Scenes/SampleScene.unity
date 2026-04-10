@@ -10668,6 +10668,10 @@ PrefabInstance:
       propertyPath: sharedHeart
       value: 
       objectReference: {fileID: 121392318}
+    - target: {fileID: 171791280964340215, guid: 89ece7630d2e9684583f5e8941c6fd91, type: 3}
+      propertyPath: sharedHeartScript
+      value: 
+      objectReference: {fileID: 121392324}
     - target: {fileID: 607113763099738102, guid: 89ece7630d2e9684583f5e8941c6fd91, type: 3}
       propertyPath: m_Color.b
       value: 1
@@ -12001,6 +12005,52 @@ Transform:
   - {fileID: 2097903619}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &686834181
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 686834183}
+  - component: {fileID: 686834182}
+  m_Layer: 0
+  m_Name: PlayerSoundMachine
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &686834182
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 686834181}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14d40f91de428d44790f727086fd5016, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundManager: {fileID: 0}
+  playerHealth: {fileID: 1067771743}
+--- !u!4 &686834183
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 686834181}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 816.2189, y: 562.06537, z: 3.8143432}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &718369523
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12904,7 +12954,7 @@ MonoBehaviour:
   obstaclesToSpawnList: []
   obstacleContainer: {fileID: 776898665}
   waitTimeUntilSpawnFirstObstacle: 5.3
-  waitTimeUntilWin: 10
+  waitTimeUntilWin: 5
 --- !u!4 &1431972380
 Transform:
   m_ObjectHideFlags: 0
@@ -13539,6 +13589,10 @@ PrefabInstance:
       propertyPath: sharedHeart
       value: 
       objectReference: {fileID: 121392318}
+    - target: {fileID: 171791280964340215, guid: 89ece7630d2e9684583f5e8941c6fd91, type: 3}
+      propertyPath: sharedHeartScript
+      value: 
+      objectReference: {fileID: 121392324}
     - target: {fileID: 607113763099738102, guid: 89ece7630d2e9684583f5e8941c6fd91, type: 3}
       propertyPath: m_Color.b
       value: 1
@@ -13802,3 +13856,4 @@ SceneRoots:
   - {fileID: 1287947257}
   - {fileID: 441737027}
   - {fileID: 1533900423}
+  - {fileID: 686834183}

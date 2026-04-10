@@ -19,12 +19,12 @@ public class ReadyCheckerScript : MonoBehaviour
         }
     }
 
-    // Comment out later
-    //private void Update()
-    //{
-    //    if (Input.GetKeyDown(KeyCode.H))
-    //    {
-    //        SceneManager.LoadScene("SampleScene");
-    //    }
-    //}
+    //Comment out later
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.H))
+        {
+            SceneManager.LoadScene("SampleScene");
+        }
+    }
 }

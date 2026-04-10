@@ -6,8 +6,18 @@ public class SoundManagerScript : MonoBehaviour
 
     public AudioClip grassAreaBgm, templeBgm;
 
+    public AudioClip shootClip, hurtClip, boomClip, throwClip;
+
+    public static SoundManagerScript instance;
+
+    private void Awake()
+    {
+        instance = this;
+    }
+
     private void Start()
     {
+
         PlayMusic(grassAreaBgm);
     }
 

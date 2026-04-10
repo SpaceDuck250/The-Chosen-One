@@ -650,7 +650,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.122
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -1082,6 +1082,10 @@ MonoBehaviour:
   effectsSrc: {fileID: 516167973}
   grassAreaBgm: {fileID: 8300000, guid: 57f51c8432f6683499fe770483c31e8b, type: 3}
   templeBgm: {fileID: 8300000, guid: 4edfef2d1bb426f47a5b848e1425bc3f, type: 3}
+  shootClip: {fileID: 8300000, guid: a503d343af76a7c46a7824ba39e4f06e, type: 3}
+  hurtClip: {fileID: 8300000, guid: ff0db94d7331c784f82fd536065af56a, type: 3}
+  boomClip: {fileID: 8300000, guid: 88c064acf14c471499df5059fae575d1, type: 3}
+  throwClip: {fileID: 8300000, guid: a7d2941a8bce39d45a70d935c3f0725a, type: 3}
 --- !u!1 &2086963368
 GameObject:
   m_ObjectHideFlags: 0

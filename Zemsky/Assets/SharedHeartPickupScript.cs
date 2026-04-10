@@ -9,6 +9,7 @@ public class SharedHeartPickupScript : MonoBehaviour
     public PlayerInputManager inputManager;
 
     public GameObject sharedHeart;
+    public SharedHeartScript sharedHeartScript;
 
     public bool holdingHeart = false;
 
@@ -53,7 +54,7 @@ public class SharedHeartPickupScript : MonoBehaviour
 
     private void TryHoldingHeart()
     {
-        if (CheckIfWithinRange())
+        if (CheckIfWithinRange() && !sharedHeartScript.followPlayer)
         {
             holdingHeart = true;
             PickupHeart();

@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class PlayerShootScript : MonoBehaviour
@@ -17,6 +18,8 @@ public class PlayerShootScript : MonoBehaviour
     public float rechargeTime;
 
     private Vector2 roundedShootDirection;
+
+    public static event Action OnAnyShot;
 
     private void Start()
     {
@@ -59,6 +62,8 @@ public class PlayerShootScript : MonoBehaviour
 
     private void ShootBullet(GameObject bullet, Vector2 direction)
     {
+        OnAnyShot?.Invoke();
+
         GameObject newBullet = Instantiate(bullet, transform.position, Quaternion.identity, bulletContainer);
 
         BulletScript bulletScript = newBullet.GetComponent<BulletScript>();
