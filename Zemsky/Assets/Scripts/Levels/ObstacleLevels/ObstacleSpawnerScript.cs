@@ -29,12 +29,16 @@ public class ObstacleSpawnerScript : MonoBehaviour
         currentMapLevelData = newLevelData;
         obstaclesToSpawnList.Clear();
 
-        foreach (var obstacle in newLevelData.obstacleList)
+        if (newLevelData != null && newLevelData.obstacleList.Count > 0)
         {
-            obstaclesToSpawnList.Add(obstacle);
-        }
+            foreach (var obstacle in newLevelData.obstacleList)
+            {
+                obstaclesToSpawnList.Add(obstacle);
+            }
 
-        StartCoroutine(waitUntilSpawnNextObstacle());
+            StartCoroutine(waitUntilSpawnNextObstacle());
+        }
+        
         
     }
 

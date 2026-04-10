@@ -15,10 +15,8 @@ MonoBehaviour:
   cameraCenterPosition: {x: 0, y: 0}
   mapName: Temple of Tutorial
   obstacleList:
-  - {fileID: 11400000, guid: 3f2637857c944204fb52711b6f88d822, type: 2}
   - {fileID: 11400000, guid: d283446a4c7d0f14582decdbd3fc3b4d, type: 2}
   - {fileID: 11400000, guid: 1b9a62737531e7d40b07899cd5850955, type: 2}
-  - {fileID: 11400000, guid: 3f2637857c944204fb52711b6f88d822, type: 2}
   - {fileID: 11400000, guid: 3f2637857c944204fb52711b6f88d822, type: 2}
   - {fileID: 11400000, guid: d283446a4c7d0f14582decdbd3fc3b4d, type: 2}
   - {fileID: 11400000, guid: 1b9a62737531e7d40b07899cd5850955, type: 2}

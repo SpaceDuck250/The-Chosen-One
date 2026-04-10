@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d9381503f2373645b1fed3bd796a0af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fallingRock: {fileID: 5385323923323414539, guid: 873ef693ab0dc75409c478bebd6fe402, type: 3}
+  fallingRock: {fileID: 5385323923323414539, guid: 5e83b708c3274af43baa1f0f54114420, type: 3}
   waitTime: 3.05
   offsetRange: 7
   container: {fileID: 0}

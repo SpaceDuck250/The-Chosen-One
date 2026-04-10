@@ -54,7 +54,7 @@ public class PlayerShootScript : MonoBehaviour
     private void OnPlayerShoot(Vector2 shootDirection)
     {
         roundedShootDirection = CalculationUtilities.RoundShootDirection(shootDirection);
-        print(shootDirection + "mog");
+        //print(shootDirection + "mog");
     }
 
     private void ShootBullet(GameObject bullet, Vector2 direction)

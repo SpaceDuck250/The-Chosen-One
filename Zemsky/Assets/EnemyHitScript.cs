@@ -10,10 +10,12 @@ public class EnemyHitScript : MonoBehaviour
     private bool canHit;
 
     public HealthScript playerHeartHealthScript;
+    public GameObject sharedHeartObj;
 
     private void Start()
     {
         playerHeartHealthScript = GameManager.instance.playerHealthScript;
+        sharedHeartObj = GameManager.instance.sharedHeart;
     }
 
     private void Update()
@@ -23,7 +25,7 @@ public class EnemyHitScript : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag != "Player")
+        if (collision.gameObject.tag != "Player" || collision.gameObject != sharedHeartObj)
         {
             return;
         }
@@ -31,6 +33,16 @@ public class EnemyHitScript : MonoBehaviour
         TurnOnHitting(true);
 
 
+    }
+
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag != "Player" || collision.gameObject != sharedHeartObj)
+        {
+            return;
+        }
+
+        TurnOnHitting(true);
     }
 
     private void OnTriggerExit2D(Collider2D collision)
@@ -41,7 +53,6 @@ public class EnemyHitScript : MonoBehaviour
     private void TurnOnHitting(bool value)
     {
         canHit = value;
-        timer = 0;
     }
 
     private void TryHitRepeatedly()

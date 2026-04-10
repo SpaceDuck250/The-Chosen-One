@@ -8,5 +8,5 @@ public class MapLevelData : ScriptableObject
 
     public string mapName;
 
-    public List<ObstacleData> obstacleList;
+    public List<ObstacleData> obstacleList = new List<ObstacleData>();
 }

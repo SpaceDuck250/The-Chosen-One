@@ -4,13 +4,29 @@ public class ObstacleFinisherScript : MonoBehaviour
 {
     public float finishTime;
 
-    private void Start()
+    private float timer;
+
+    private bool finished = false;
+
+    private void Update()
     {
-        Invoke("FinishObstacle", finishTime);
+        if (finished)
+        {
+            return;
+        }
+
+        timer += Time.deltaTime;
+        Debug.Log("Counting " + gameObject);
+        if (timer >= finishTime)
+        {
+            FinishObstacle();
+            finished = true;
+        }
     }
 
     private void FinishObstacle()
     {
         ObstacleSpawnerScript.OnObstacleFinished?.Invoke();
+        Debug.Log("Finished An Obstacle");
     }
 }

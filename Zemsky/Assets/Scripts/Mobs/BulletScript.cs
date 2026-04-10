@@ -3,6 +3,7 @@ using UnityEngine;
 public class BulletScript : MonoBehaviour
 {
     public string tagToIgnore;
+    public string target;
     public float damage;
 
     public GameObject shooter;
@@ -20,23 +21,25 @@ public class BulletScript : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        print(other.gameObject + "-Arrow");
-        if (other.tag == tagToIgnore || other.gameObject == shooter || other.gameObject == gameObject)
+        //print(other.gameObject + "-Arrow");
+        if (other.tag == tagToIgnore || other.gameObject == shooter || other.gameObject == gameObject || other.tag != target)
         {
-            print("ignored");
+            //print("ignored");
             return;
         }
 
         HealthScript healthScript = other.gameObject.GetComponent<HealthScript>();
         if (healthScript != null)
         {
-            print("didnt");
+            //print("didnt");
 
             ApplyDamage(healthScript);
 
         }
 
+        //print("Destroyed because hit " + other.gameObject);
         Destroy(gameObject);
+        
 
 
     }

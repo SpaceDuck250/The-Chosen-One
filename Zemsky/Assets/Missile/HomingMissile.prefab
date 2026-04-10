@@ -149,7 +149,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   boomObj: {fileID: 877055700180311871, guid: 70cdc9b281d13fe4481a410da3702283, type: 3}
-  boomTime: 9.21
+  boomTime: 8.2
   aboutToBoomTime: 3.24
 --- !u!61 &6595209094818508582
 BoxCollider2D:

@@ -19,7 +19,7 @@ public class ShrineScript : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Player")
+        if (GameManager.instance.CheckIfPlayer(collision.gameObject))
         {
             if (playersParent == null)
             {
@@ -32,7 +32,7 @@ public class ShrineScript : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Player")
+        if (GameManager.instance.CheckIfPlayer(collision.gameObject))
         {
             if (playersParent == null)
             {

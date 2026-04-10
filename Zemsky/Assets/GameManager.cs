@@ -87,4 +87,17 @@ public class GameManager : MonoBehaviour
             child.transform.localPosition = offset;
         }
     }
+
+    public bool CheckIfPlayer(GameObject objToCheck)
+    {
+        foreach (Transform player in sharedPlayer.transform)
+        {
+            if (objToCheck == player.gameObject)
+            {
+                return true;
+            }
+        }
+
+        return false;
+    }
 }

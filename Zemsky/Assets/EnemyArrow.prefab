@@ -144,6 +144,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tagToIgnore: Enemy
+  target: Player
   damage: -10
   shooter: {fileID: 0}
   rb: {fileID: 7876688509202875912}

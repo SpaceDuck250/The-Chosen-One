@@ -8,6 +8,8 @@ TagManager:
   - Center
   - Container
   - Enemy
+  - Undefined
+  - HitBox
   layers:
   - Default
   - TransparentFX
