@@ -169,6 +169,7 @@ GameObject:
   - component: {fileID: 8419076801714143352}
   - component: {fileID: 3486761369761888573}
   - component: {fileID: 6883464904485826010}
+  - component: {fileID: 4018621969096086485}
   m_Layer: 0
   m_Name: Zombie
   m_TagString: Enemy
@@ -342,7 +343,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 0
-  maxHealth: 10
+  maxHealth: 30
   owner: {fileID: 7388844626321315330}
 --- !u!114 &5055107184657120721
 MonoBehaviour:
@@ -404,3 +405,17 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &4018621969096086485
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7388844626321315330}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2daf17213f0aea843b8fd0f2e1a47fe9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 6883464904485826010}
+  healthScript: {fileID: 1482848639793605381}

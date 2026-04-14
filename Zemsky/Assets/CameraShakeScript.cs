@@ -34,6 +34,7 @@ public class CameraShakeScript : MonoBehaviour
         {
             generalTimer = 0;
             EndShake();
+            return;
         }
 
         RepeatShake();
@@ -79,6 +80,7 @@ public class CameraShakeScript : MonoBehaviour
 
         if (obstacleSpawner.currentMapLevelData != null)
         {
+            //Vector3 correctPosition = new Vector3(obstacleSpawner.currentMapLevelData.cameraCenterPosition.x, obstacleSpawner.currentMapLevelData.cameraCenterPosition.y, 0);
             cam.transform.position = (Vector3)obstacleSpawner.currentMapLevelData.cameraCenterPosition + new Vector3(0, 0, -1000);
 
         }

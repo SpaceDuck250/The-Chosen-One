@@ -14218,9 +14218,25 @@ PrefabInstance:
       propertyPath: playerHealthScript
       value: 
       objectReference: {fileID: 1067771743}
+    - target: {fileID: 2277458341325202787, guid: b4d298bc2d2b3bb40bdecd6ef6d52949, type: 3}
+      propertyPath: m_BackGroundColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2277458341325202787, guid: b4d298bc2d2b3bb40bdecd6ef6d52949, type: 3}
+      propertyPath: m_BackGroundColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2277458341325202787, guid: b4d298bc2d2b3bb40bdecd6ef6d52949, type: 3}
+      propertyPath: m_BackGroundColor.r
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6131438753218964336, guid: b4d298bc2d2b3bb40bdecd6ef6d52949, type: 3}
       propertyPath: m_Name
       value: Main Camera
+      objectReference: {fileID: 0}
+    - target: {fileID: 6970926870794312720, guid: b4d298bc2d2b3bb40bdecd6ef6d52949, type: 3}
+      propertyPath: offsetValue
+      value: 0.45
       objectReference: {fileID: 0}
     - target: {fileID: 6970926870794312720, guid: b4d298bc2d2b3bb40bdecd6ef6d52949, type: 3}
       propertyPath: obstacleSpawner
