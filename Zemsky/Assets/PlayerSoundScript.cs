@@ -26,6 +26,11 @@ public class PlayerSoundScript : MonoBehaviour
 
     private void OnHealthChanged(HealthInfo healthInfo)
     {
+        if (soundManager == null)
+        {
+            return;
+        }
+
         if (healthInfo.healthChangeAmount < 0)
         {
             soundManager.PlayEffect(soundManager.hurtClip);
@@ -34,6 +39,11 @@ public class PlayerSoundScript : MonoBehaviour
 
     private void OnShoot()
     {
+        if (soundManager == null)
+        {
+            return;
+        }
+
         soundManager.PlayEffect(soundManager.shootClip);
     }
 }

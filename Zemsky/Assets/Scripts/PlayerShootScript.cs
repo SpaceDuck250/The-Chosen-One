@@ -62,6 +62,7 @@ public class PlayerShootScript : MonoBehaviour
 
     private void ShootBullet(GameObject bullet, Vector2 direction)
     {
+
         OnAnyShot?.Invoke();
 
         GameObject newBullet = Instantiate(bullet, transform.position, Quaternion.identity, bulletContainer);
